@@ -6,7 +6,7 @@
 
 
 
-//  - HH:MM::SS (Eg. 13:45:23)   [Format : 1]
+//  - HH:MM::SS (Eg. 13:45:23)   [Format : 1]  ==> 
 function currentMachineTime(){
     let time = new Date();
 
@@ -21,7 +21,7 @@ setInterval(() => {
 }, 1000);
 
 
-//  - HH:MM::SS AM/PM (Eg 01:45:23 PM)   [Format : 2]
+//  - HH:MM::SS AM/PM (Eg 01:45:23 PM)   [Format : 2] ==> 
 
 function currentMachineTimeNew(){
     let now = new Date();
