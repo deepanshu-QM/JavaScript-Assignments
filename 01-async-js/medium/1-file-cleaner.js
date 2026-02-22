@@ -11,3 +11,31 @@
 // ```
 // hello world my name is raman
 // ```
+
+
+const fs = require('fs');
+
+function CleanAfile() {
+
+          //Reading 
+    fs.readFile("file.txt", "utf-8", (err, content) => {
+        if (err) {
+            console.log("File Cannot be read");
+            return;
+        }
+
+        // Remove extra spaces
+        let data = content.replace(/\s+/g, ' ').trim();
+
+        // Write cleaned content back
+        fs.writeFile("file.txt", data, (err) => {
+            if (err) {
+                console.log("Cannot write over the File");
+                return;
+            }
+            console.log("Changes Successful");
+        });
+    });
+}
+
+CleanAfile();
